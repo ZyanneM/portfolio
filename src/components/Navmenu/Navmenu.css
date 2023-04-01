@@ -1,10 +1,12 @@
+
 ul {
-    position: absolute;
+    position: fixed;
     top: 40px;
+    left: 35%;
     margin: 0 auto;
 }
 
 ul a{
-    color: rgb(247, 243, 243);
+    color: rgba(26, 26, 26, 0.87);
     padding: 40px;
 }

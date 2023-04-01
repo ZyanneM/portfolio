@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="App">
       <Navmenu />
-      <h1>Bienvenue sur mon Portfolio</h1>
+      {/* <h1>Bienvenue sur mon Portfolio</h1> */}
+      <div className='home'></div>
     </div>
   )
 }
