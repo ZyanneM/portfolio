@@ -1,0 +1,10 @@
+ul {
+    position: absolute;
+    top: 40px;
+    margin: 0 auto;
+}
+
+ul a{
+    color: rgb(247, 243, 243);
+    padding: 40px;
+}
