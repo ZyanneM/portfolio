@@ -3,14 +3,14 @@ import './Navmenu.css';
 
 const Navmenu = () => {
     return (
-        <div>
+        <header>
             <ul>
                 <a href="#">Homepage</a>
                 <a href="#">About me</a>
                 <a href="#">My Work</a>
                 <a href="#">Contact</a>
             </ul>
-        </div>
+        </header>
     );
 };
 
