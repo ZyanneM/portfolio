@@ -10,8 +10,10 @@ function App() {
       <Navmenu />
       {/* <h1>Bienvenue sur mon Portfolio</h1> */}
       <div className='home'></div>
-      <h1>Marilyn Olejniczak</h1>
-      <h1>Développeuse Front-End</h1>
+      <div className='text-homepage'>
+        <h1 className='name'>Marilyn Olejniczak</h1>
+        <h1 className='title'>Développeuse Front-End</h1>
+      </div>
     </div>
   )
 }
