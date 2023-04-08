@@ -1,10 +1,50 @@
 .about {
-    background-color: rgb(144, 110, 176);
-    max-width: 100%;
+    background: linear-gradient(90deg, rgba(193,171,235,0.6811099439775911) 35%, rgba(136,115,207,1) 59%, rgba(89,83,184,1) 100%);background: linear-gradient(172deg, rgba(89,83,184,1) 0%, rgba(136,115,207,1) 50%, rgba(193,171,235,0.6811099439775911) 100%);    width: 100%;
+    position: relative;
+    height: 100vh;
 }
 
 .about h1 {
     font-size: 3rem;
     color: antiquewhite;
     font-family: 'Montserrat';
+}
+
+.about h2 {
+    position: relative;
+    z-index: 10;
+    color: antiquewhite;
+    margin-left: 10rem;
+    padding: 10rem;
+    width: 80%;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.about h2 span {
+    font-size: 3.2rem;
+}
+
+.about p {
+    position: relative;
+    width: 37rem;
+    color: antiquewhite;
+    text-align:justify;
+    font-size: 1.5rem;
+    top: 0;
+    margin-left: 60rem;
+}
+
+.photo{
+    position: absolute;
+    z-index: 1;
+    top: 5rem;
+    left:40rem;
+    width: 20rem;
+    height: 15rem;
+    background-image: url("./public/imagecotedroit.png");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
 }
