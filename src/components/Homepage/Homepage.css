@@ -1,0 +1,28 @@
+.home{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25em;
+    height: 24em;
+    background-image: url("./public/dragonportfoliobase.png");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: levitation;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+  }
+  
+  @keyframes levitation {
+    0% {
+      transform: translateY(0); /* déplacement initial */
+    }
+    50% {
+      transform: translateY(-18px) translateX(+2px); /* déplacement vers le haut */
+    }
+    100% {
+      transform: translateY(0) scale(1); /* retour au déplacement initial */
+    }
+  }

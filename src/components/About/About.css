@@ -1,0 +1,10 @@
+.about {
+    background-color: rgb(144, 110, 176);
+    max-width: 100%;
+}
+
+.about h1 {
+    font-size: 3rem;
+    color: antiquewhite;
+    font-family: 'Montserrat';
+}

@@ -1,17 +1,16 @@
 import { useState } from 'react'
 import './App.css'
 import Navmenu from './components/Navmenu/Navmenu.jsx'
+import Homepage from './components/Homepage/Homepage'
+import About from './components/About/About'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <Navmenu />
-      {/* <h1>Bienvenue sur mon Portfolio</h1> */}
-      <div className='home'></div>
-      <h1>Marilyn Olejniczak</h1>
-      <h1>Développeuse Front-End</h1>
+      <Homepage/>
+      <About/>
     </div>
   )
 }
