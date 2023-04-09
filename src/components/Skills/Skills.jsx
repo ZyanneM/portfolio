@@ -3,8 +3,8 @@ import './Skills.css'
 import SkillsCard from './SkillsCard';
 
 const Skills = () => {
-const skills = ['Javascript', 'React', 'PHP', 'MySql', 'Node.JS', 'Dragon Rise']
-const images = ['./javascript.png','./react.png','./javascript.png','./react.png', './javascript.png','./react.png']
+const skills = ['Javascript', 'React', 'HTML5', 'Node.JS', 'CSS', 'Dragon Ride', 'PHP', 'Wordpress', 'Strapi', 'MySql', 'Git', 'Figma']
+const images = ['./javascript.png','./react.png','./html.png','./nodejs.png', './css.png', './dragonride.png', './php.png','./wordpress.png','./strapi.png','./mysql.png', './git.png','./figma.png']
 
     return (
         <div className='skills'>
