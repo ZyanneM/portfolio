@@ -8,7 +8,7 @@ const SingleWork = () => {
                 {/* <div className='project-img'>
                     <img src="./capturetest.png" alt="" />
                 </div> */}
-                <video id='vid' autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" data-aos="fade-up" controls width="380">
+                <video className="project-video" id='vid' autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" data-aos="fade-up" controls width="380">
                     <source src="./videotest.mp4" type="video/mp4"></source>
                 </video>
                 <script>

@@ -1,6 +1,6 @@
 .work-container{
     background: linear-gradient(90deg, rgba(193,171,235,0.6811099439775911) 35%, rgba(136,115,207,1) 59%, rgba(89,83,184,1) 100%);background: linear-gradient(172deg, rgba(89,83,184,1) 0%, rgba(136,115,207,1) 50%, rgba(193,171,235,0.6811099439775911) 100%);    
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     color: antiquewhite;
     display: flex;
@@ -12,5 +12,109 @@
 .work-container h1{
     padding-top: 3rem;
     margin: 0;
+}
+
+.slides-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.slider-navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.slider-nav{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 2rem;
+    font-size: 3rem;
+}
+
+.prev {
+    position: absolute;
+    left: 135px;
+}
+
+.next {
+    position: absolute;
+    right: 135px;
+}
+
+.active {
+    color: blueviolet;
+}
+
+.slider-dots ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.slider-dots ul li{
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.slides-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.slider-navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.slider-nav{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 2rem;
+    font-size: 3rem;
+}
+
+.prev {
+    position: absolute;
+    left: 135px;
+}
+
+.next {
+    position: absolute;
+    right: 135px;
+}
+
+.active {
+    color: blueviolet;
+}
+
+.slider-dots ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.slider-dots ul li{
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
