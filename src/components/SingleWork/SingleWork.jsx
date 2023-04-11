@@ -3,12 +3,12 @@ import './SingleWork.css'
 
 const SingleWork = () => {
     return (
-            <div className='work-card'>
+            <>
                 <h1>Project React/Node.JS</h1>
                 {/* <div className='project-img'>
                     <img src="./capturetest.png" alt="" />
                 </div> */}
-                <video className="project-video" id='vid' autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" data-aos="fade-up" controls width="380">
+                <video className="project-video" id='vid' autoPlay="autoplay" muted="muted" loop="loop" playsInline="playsinline" preload="metadata" data-aos="fade-up" controls width="280">
                     <source src="./videotest.mp4" type="video/mp4"></source>
                 </video>
                 <script>
@@ -21,7 +21,7 @@ const SingleWork = () => {
                     <li>Navigation Menu</li>
                 </ul>
                 <a>Github Repository</a>
-            </div>
+                </>
     );
 };
 
