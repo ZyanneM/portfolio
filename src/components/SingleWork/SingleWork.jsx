@@ -1,26 +1,28 @@
 import React from 'react';
 import './SingleWork.css'
 
-const SingleWork = () => {
+const SingleWork = (props) => {
+const contents = props.content;
+
     return (
             <>
-                <h1>Project React/Node.JS</h1>
+                <h1 className='work-title'>{props.title}</h1>
+                <h1 className='technos-title'>{props.technos}</h1>
                 {/* <div className='project-img'>
                     <img src="./capturetest.png" alt="" />
                 </div> */}
                 <video className="project-video" id='vid' autoPlay="autoplay" muted="muted" loop="loop" playsInline="playsinline" preload="metadata" data-aos="fade-up" controls width="280">
-                    <source src="./videotest.mp4" type="video/mp4"></source>
+                    <source src={props.src} type="video/mp4"></source>
                 </video>
                 <script>
                 document.getElementById('vid').play();
                 </script>
-                <p>An Awesome project with functionalities</p>
                 <ul>
-                    <li>Wonderful App Design</li>
-                    <li>Dynamic Javascript</li>
-                    <li>Navigation Menu</li>
+                {contents.map((content) => (
+                    <li>{content}</li>))}
                 </ul>
-                <a>Github Repository</a>
+                 {props.repo !="" ?
+                    <a href={props.repo} target="_blank">Github Repository</a> :""}
                 </>
     );
 };

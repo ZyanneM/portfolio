@@ -1,7 +1,7 @@
 .border-div{
     position: absolute;
     z-index: -1;
-    width: 73%;
+    width: 68%;
     height: 85%;
     background: linear-gradient(90deg, rgba(193,171,235,0.6811099439775911) 35%, rgba(136,115,207,1) 59%, rgba(89,83,184,1) 100%);background: linear-gradient(172deg, rgba(89,83,184,1) 0%, rgba(136,115,207,1) 50%, rgba(193,171,235,0.6811099439775911) 100%);
     border-radius: 16px;
@@ -49,8 +49,20 @@
     padding-bottom: 2rem;
 }
 
-.contact-form h2:nth-child(1){
+.contact-title{
+    font-size: 2.5rem;
+}
+
+.contact-form h2:not(.contact-title){
     font-family: 'Montserrat';
+    padding-top: 1.8rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+.contact-form h3{
+    font-size: 1.8rem;
 }
 
 .contact-form label{
@@ -67,12 +79,6 @@
     border-width: 1px;
     border-color: rgb(120, 75, 161);
     width: 20rem;
-}
-
-.contact-form h2 {
-    padding-top: 1.8rem;
-    margin: 0;
-    font-size: 2rem;
 }
 
 .contact-form .letter {
@@ -98,3 +104,29 @@
     width: 60%;
     height: 80%;
 }
+
+.up{
+    height: 300px;
+    width: 100px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 10vw;
+    z-index: 10;
+  }
+  
+.up-arrow{
+    padding: 0;
+    transform: rotate(-90deg);
+    background-color: transparent;
+    color: #9667C9;
+  }
+
+  .up-arrow:hover{
+    text-shadow: 2px 2px 4px #27085a60;
+  }

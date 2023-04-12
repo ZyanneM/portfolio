@@ -27,12 +27,13 @@ const Navmenu = () => {
     
     return (
         <>
-        <header>
+        <header  id="home">
             <ul className='navmenu'>
-                <a href="#">Homepage</a>
-                <a href="#">About me</a>
-                <a href="#">My Work</a>
-                <a href="#">Contact</a>
+                {/* <a href="#home">Homepage</a> */}
+                <a href="#about">About me</a>
+                <a href="#skills">Skills</a>
+                <a href="#work">My Work</a>
+                <a href="#contact">Contact</a>
             </ul>
             <div className="icon nav-icon" onClick={toggleMenu}>
                 <span></span>
@@ -48,6 +49,7 @@ const Navmenu = () => {
                 </ul>
             </div>
         </header>
+
         </>
     );
 };

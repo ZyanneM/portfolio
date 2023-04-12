@@ -7,7 +7,7 @@ const skills = ['Javascript', 'React', 'HTML5', 'Node.JS', 'CSS', 'Dragon Ride',
 const images = ['./javascript.png','./react.png','./html.png','./nodejs.png', './css.png', './dragonride.png', './php.png','./wordpress.png','./strapi.png','./mysql.png', './git.png','./figma.png']
 
     return (
-        <div className='skills'>
+        <div className='skills' id='skills'>
             <h1>In every story the hero has awesome Skills</h1>
             <div className='skills-container'>
             {skills.map((skill, index) => (

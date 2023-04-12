@@ -17,12 +17,27 @@
     left: 50%;
 }
 
-.work-card h1{
-    font-size: 1rem;
-    padding: 1rem;
+.work-title{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1.2rem;
+    margin: 0 auto;
 }
 
+.technos-title{
+    width: 100%;
+    color: antiquewhite;
+    background-color: #9667C9;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+
 .project-video{
+    width: 100%;
     /* transform: scale(1.3) rotate(25deg); */
     transition: 0.25s;
 }
@@ -55,6 +70,11 @@
 .item-5{
     z-index: 1;
     transform: scale(0.9) translateX(-50%) translate3d(-200%,-5%,0);
+}
+
+.item-6{
+    z-index: 2;
+    transform: scale(1.3) translateX(-50%) translate3d(0,0,0);
 }
 
 .num0 video{

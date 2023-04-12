@@ -15,20 +15,22 @@ const Contact = () => {
     };
 
     return (
-        <div className='first-contact-container'>
+        <div className='first-contact-container' id="contact">
             <div className='contact-container'>
                 <div className='border-div'></div>
                 <form className="contact-form" onSubmit={handleSubmit}>
-                    <h2>Contact Me</h2>
+                    <h2 className='contact-title'>Contact Me</h2>
                     <div className='letter'>💌</div>
-                    <label htmlFor="delivery-select">Choose your delivery method</label>
+                    <label htmlFor="delivery-select"><h2>1. Choose your delivery method</h2></label>
                         <select name="delivery" id="delivery">
                             <option value="">--Please choose an option--</option>
                             <option value="owl">Owl 🦉</option>
                             <option value="dragon">Dragon 🐉</option>
                             <option value="email">Email 💌</option>
                         </select>
-                <div className='form-section'>
+                        <h2>2. Send me an Email</h2>
+                        <h3>marilyn.olejniczak@gmail.com</h3>
+                {/* <div className='form-section'>
                     <label htmlFor="name">Name</label>
                     <input
                     type="text"
@@ -57,13 +59,16 @@ const Contact = () => {
                     required
                     />
                 </div>
-                <button type="submit">Envoyer</button>
+                <button type="submit">Envoyer</button> */}
                 </form>
                 <div className='img-select'>
                     <img src="./coffee.png" alt="" />
                 </div>
-            </div>
-        </div>
+                </div>
+                <a className='up' href='#home'>
+                <button className="up-arrow">Back to Home &rsaquo;</button>
+            </a>
+                </div>
   );
 };
 
