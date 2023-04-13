@@ -1,0 +1,26 @@
+.conception-title{
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+.conception-card-container{
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.conception-card{
+    width: 30%;
+    border-radius: 20px;
+}
+
+.conception-card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.conception-card:nth-child(2){
+    width: 25%;
+}

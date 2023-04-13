@@ -3,11 +3,17 @@ import './Homepage.css'
 
 const Homepage = () => {
     return (
-        <div className='homepage' id="home">
-            <div className='home'></div>
+        <div className='homepage'>
+            <div className='home'>
+                <img src="./dragonportfoliobase.png" alt="dragon" />
+            </div>
             <div className='reseaux'>
-                <div className='linkedin'></div>
-                <div className='github'></div>
+                <a href="https://www.linkedin.com/in/marilyn-olejniczak" target="_blank" className='linkedin'>
+                    <img src="./reseauxportfolinkedin.png" alt="linkedin" />
+                </a>
+                <a href="https://github.com/ZyanneM" target="_blank" className='github'>
+                <img  src="./reseauxportfogithub.png" alt="github" />
+                </a>
                 <div className='follow'>
                     <div className='lign'></div>
                     <p>Follow-Me</p>

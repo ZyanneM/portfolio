@@ -15,14 +15,14 @@
     margin-top: 2rem;
     /* margin-left: 10rem;
     margin-right: 10rem; */
-    background-image: url("./public/dragonportfoliobase.png");
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
     animation-name: levitation;
     animation-duration: 4.5s;
     animation-iteration-count: infinite;
     animation-direction:alternate;
+  }
+
+  .home img{
+    width: 100%;
   }
   
 
@@ -59,27 +59,25 @@
     place-items: center;
   }
 
+  .linkedin img{
+    width: 100%;
+  }
+
   .linkedin{
     cursor: pointer;
-    width: 40%;
+    width: 60%;
     height: 14%;
-    background-image: url('./public/reseauxportfolinkedin.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     padding: 1rem;
+  }
+
+  .github img{
+    width: 100%;
   }
 
   .github{
     cursor: pointer;
-    display: flex;
-    place-items: center;
-    width: 40%;
+    width: 60%;
     height: 14%;
-    background-image: url('./public/reseauxportfogithub.png');
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
     padding: 1rem;
 
   }

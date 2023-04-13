@@ -2,6 +2,7 @@ import React from 'react';
 import { useState , useEffect} from 'react';
 import './Work.css'
 import SingleWork from '../SingleWork/SingleWork';
+import Conception from '../Conception/Conception';
 
 const Work = () => {
 // const projects = ["./wordpress.mp4", "./mypeacefulplace.mp4", "./blog.mp4", "./jsvanilla.mp4", "./mytvapp.mp4", "./appburger.mp4"];
@@ -83,7 +84,7 @@ useEffect(() => {
                 ))}
                         </ul>
                     </div>
-            
+                    <Conception/>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import Skills from './components/Skills/Skills';
 import Work from './components/Work/Work';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Conception from './components/Conception/Conception';
 
 function App() {
 
