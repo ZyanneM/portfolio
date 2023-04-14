@@ -31,13 +31,17 @@ useEffect(() => {
     slideItems.forEach((item, index) => {
         if(selectedItem){
       let slideOffset = index - selectedItemValue;
-      
       // slideOffset = slideOffset < slidesNumber - 1 ? slideOffset + 1 : 0
       if(slideOffset < 0) slideOffset += slideItems.length;
 
-      for (let i = 0; i < slideItems.length +1; i++) { 
-            item.classList.remove(`item-${i}`);
-            item.classList.add(`item-${slideOffset +1}`);
+      for (let i = 0; i < slideItems.length; i++) { 
+        let classeVar = 0;
+        classeVar++;
+          if(classeVar>5) {
+            item.classList.replace(`item-${classeVar+1}`,`item-${i-slideItems.length}`);
+        }else{
+          item.classList.replace(`item-${index}`,`item-${classeVar +1}`);
+            }
         } 
             
       }
