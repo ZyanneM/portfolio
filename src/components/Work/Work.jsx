@@ -15,118 +15,121 @@ const projects = [
     { id: 6, title: "React Burger App", technos: "React", src: "./appburger.mp4" , content: ['React Props Training', 'Cart Simulation', 'Tabs Navigation'], repo: "https://github.com/ZyanneM/react-burger-app"}
   ];
 
-const [selectedItem, setSelectedItem] = useState(0);
 
-const setItemSlider = (event) => {
-  const targetId = event.target.id || event.target.parentNode.id;
-  setSelectedItem(parseInt(targetId));
-}
 
-useEffect(() => {
+  let index = 0;
 
-    const slideItems = document.querySelectorAll('.work-card');
-  const selectedItemValue = selectedItem; 
+    const [selectedItem, setSelectedItem] = useState(0);
 
+    const [projectList, setProjectList] = useState(projects);
+
+    useEffect( () => {
+      const mainDiv = document.getElementById("slide-items");
+      mainDiv.style.pointerEvents = "none";
+    
   
-    slideItems.forEach((item, index) => {
-        if(selectedItem){
-      let slideOffset = index - selectedItemValue;
-      
-      // slideOffset = slideOffset < slidesNumber - 1 ? slideOffset + 1 : 0
-      if(slideOffset < 0) slideOffset += slideItems.length;
+      const children = mainDiv.getElementsByTagName("*");
+      for (var i = 0; i < children.length; i++) {
+        children[i].style.pointerEvents = "auto";
+    }
+    
+    },[])
 
-      for (let i = 0; i < slideItems.length +1; i++) { 
-            item.classList.remove(`item-${i}`);
-            item.classList.add(`item-${slideOffset +1}`);
-        } 
-            
-      }
-    });
-  }, [selectedItem]);
+    const setItemSlider = (event) => {
+        const targetId = event.target.id || event.target.parentNode.id;
+
+        setSelectedItem(parseInt(targetId));
+    }
+
+    const getItemClass = (index) => {
+        const diff = index - selectedItem;
+        const adjustedIndex = (diff + projects.length) % projects.length;
+        return `item-${adjustedIndex}`;
+    };
+
+    const handleNextClick = () => {
+      if (selectedItem)
+        setSelectedItem((prevSelectedItem) => (prevSelectedItem + 1) % projects.length);
+    };
+
+    const handlePrevClick = () => {
+      if (selectedItem)
+        setSelectedItem((prevSelectedItem) => (prevSelectedItem - 1 + projects.length) % projects.length);
+    };
+
+    useEffect(() => {
+
+        const slideItems = document.querySelectorAll('.work-card');
+        const selectedItemValue = selectedItem;
+
+
+        slideItems.forEach((item, index) => {
+            if (selectedItem) {
+                let slideOffset = index - selectedItemValue;
+     
+                if (slideOffset < 0) slideOffset += slideItems.length;
+
+                for (let i = 0; i < slideItems.length; i++) {
+                    let classeVar = 0;
+                    classeVar++;
+                    if (classeVar > 5) {
+                        item.classList.replace(`item-${classeVar + 1}`, `item-${i - slideItems.length}`);
+                    } else {
+                        item.classList.replace(`item-${index}`, `item-${classeVar + 1}`);
+                    }
+                }
+
+            }
+        });
+    }, [selectedItem]);
 
 
     return (
         <div className='work-container' id="work">
             <h1 className='work-section-title'>Some of my web development adventures</h1>
-            {/* <p>Put here an awesome projects gallery</p> */}
+         
             <div className='slides-container'>
-                <div 
-                className='slide-items'
-                onClick={(event) => setItemSlider(event)}
-                    >
-                {projects.map((project, index) => (
-                    <div
-                    // onClick={(event) => setItemSlider(event)}
-                    key={project}
-                    id={index}
-                    className={`work-card item-${index}`}>
-                    <SingleWork
-                    src={project.src}
-                    title={project.title}
-                    technos={project.technos}
-                    content={project.content}
-                    repo={project.repo}
-                    key={project}
-                />
-                </div>
-                ))}
+                <div
+                    className='slide-items'
+                    id='slide-items'
+                    onClick={(event) => setItemSlider(event)}
+                >
+                    {projectList.map((project, index) => (
+                        <div
+                           
+                            key={project}
+                            id={index}
+                            className={`work-card ${getItemClass(index)}`}>
+                            <SingleWork
+                                src={project.src}
+                                title={project.title}
+                                technos={project.technos}
+                                content={project.content}
+                                repo={project.repo}
+                                key={project}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="slider-navigation">
-                    <button className="slider-nav prev">&lsaquo;</button>
-                    <button className="slider-nav next">&rsaquo;</button>
-                </div>  
+                <button className="slider-nav prev" onClick={handlePrevClick}>&lsaquo;</button>
+                <button className="slider-nav next" onClick={handleNextClick}>&rsaquo;</button>
+            </div>
             <div className="slider-dots">
-                        <ul>
-                        {projects.map((project) => ( 
-                            <li
+                <ul>
+                    {projects.map((project) => (
+                        <li
                             key={project}></li>
-                ))}
-                        </ul>
-                    </div>
-                    <Conception/>
+                    ))}
+                </ul>
+            </div>
+            <Conception/>
         </div>
     );
 };
 
 
 
+
 export default Work;
-
-
-//Code presque fonctionnel 
-
-// const [selectedItem, setSelectedItem] = useState(0);
-
-// const setItemSlider = (event) => {
-//   const targetId = event.target.id || event.target.parentNode.id;
-//   setSelectedItem(parseInt(targetId));
-// }
-
-// useEffect(() => {
-//   const slideItems = document.querySelectorAll('.work-card');
-//   slideItems.forEach((item, index) => {
-//     if(selectedItem){
-//     item.classList.remove('item-0', 'item-1', 'item-2', 'item-3', 'item-4', 'item-5', 'item-6');
-//     item.classList.add(`item-${(index - selectedItem + slideItems.length) % slideItems.length + 1}`);
-//   }});
-// }, [selectedItem]);
-
-
-
-// const slideItems = document.querySelectorAll('.work-card');
-// const slidesNumber = slideItems.length;
-
-
-
-// slideItems.forEach((item, index) => {
-
-//   if(selectedItem){
-//       let slideOffset = index - selectedItem;
-
-//       // slideOffset = slideOffset < slidesNumber - 1 ? slideOffset + 1 : 0
-//       if(slideOffset < 0) slideOffset += slideItems.length;
-
-//      item.classList.replace(`item-${index}`, `item-${index+1}`)};
-// });
-// }, [selectedItem]);
