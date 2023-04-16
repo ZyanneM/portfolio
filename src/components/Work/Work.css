@@ -132,3 +132,13 @@
 max-width: 60%;
 }
 
+.slide-items-mobile{
+    width: 600vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: scroll;
+}
+

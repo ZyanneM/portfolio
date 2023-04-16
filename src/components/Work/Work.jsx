@@ -3,6 +3,7 @@ import { useState , useEffect} from 'react';
 import './Work.css'
 import SingleWork from '../SingleWork/SingleWork';
 import Conception from '../Conception/Conception';
+import SingleWorkMobile from '../SingleWorkMobile/SingleWorkMobile';
 
 const Work = () => {
 // const projects = ["./wordpress.mp4", "./mypeacefulplace.mp4", "./blog.mp4", "./jsvanilla.mp4", "./mytvapp.mp4", "./appburger.mp4"];
@@ -41,27 +42,41 @@ const projects = [
         setSelectedItem(parseInt(targetId));
     }
 
-    const getItemClass = (index) => {
-        const diff = index - selectedItem;
-        const adjustedIndex = (diff + projects.length) % projects.length;
-        return `item-${adjustedIndex}`;
-    };
 
-    const handleNextClick = () => {
-      if (selectedItem)
-        setSelectedItem((prevSelectedItem) => (prevSelectedItem + 1) % projects.length);
-    };
+        const getItemClass = (index) => {
+            const diff = index - selectedItem;
+            const adjustedIndex = (diff + projects.length) % projects.length;
+            return `item-${adjustedIndex}`;
+        };
 
-    const handlePrevClick = () => {
-      if (selectedItem)
-        setSelectedItem((prevSelectedItem) => (prevSelectedItem - 1 + projects.length) % projects.length);
-    };
+        const getItemClassMobile = (index) => {
+            const diff = index - selectedItem;
+            const adjustedIndex = (diff + projects.length) % projects.length;
+            return `item-${adjustedIndex}-mobile`;
+        };
+
+
+        const handleNextClick = () => {
+            if (selectedItem)
+              setSelectedItem((prevSelectedItem) => (prevSelectedItem + 1) % projects.length);
+          };
+      
+          const handlePrevClick = () => {
+            if (selectedItem)
+              setSelectedItem((prevSelectedItem) => (prevSelectedItem - 1 + projects.length) % projects.length);
+          };
+
 
     useEffect(() => {
 
         const slideItems = document.querySelectorAll('.work-card');
         const selectedItemValue = selectedItem;
 
+
+    
+    
+
+    
 
         slideItems.forEach((item, index) => {
             if (selectedItem) {
@@ -95,19 +110,45 @@ const projects = [
                     onClick={(event) => setItemSlider(event)}
                 >
                     {projectList.map((project, index) => (
-                        <div
-                           
-                            key={project}
-                            id={index}
-                            className={`work-card ${getItemClass(index)}`}>
-                            <SingleWork
-                                src={project.src}
-                                title={project.title}
-                                technos={project.technos}
-                                content={project.content}
-                                repo={project.repo}
+                        <div className='work-card-container'>
+                            <div
+                            
                                 key={project}
-                            />
+                                id={index}
+                                className={`work-card ${projectList ? getItemClass(index) : ""}`}>
+                                <SingleWork
+                                    src={project.src}
+                                    title={project.title}
+                                    technos={project.technos}
+                                    content={project.content}
+                                    repo={project.repo}
+                                    key={project}
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className='slides-container-mobile'>
+                <div
+                    className='slide-items-mobile'
+                    id='slide-items-mobile'
+                    onClick={(event) => setItemSlider(event)}
+                >
+                    {projectList.map((project, index) => (
+                            <div
+                            
+                                key={project}
+                                id={index}
+                                className={`work-card-mobile ${projectList ? getItemClassMobile(index) : ""}`}>
+                                <SingleWorkMobile
+                                    src={project.src}
+                                    title={project.title}
+                                    technos={project.technos}
+                                    content={project.content}
+                                    repo={project.repo}
+                                    key={project}
+                                />
                         </div>
                     ))}
                 </div>
