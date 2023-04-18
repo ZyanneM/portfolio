@@ -1,7 +1,7 @@
 .work-card-mobile{
     border-radius: 16px;
     color: rgb(120, 75, 161);
-    width: 100vw;
+    width: 70vw;
     max-height: 60%;
     background-color: RGB(230, 228, 228);
     display: flex;
@@ -13,9 +13,6 @@
     margin-right: 2rem; */
     z-index: 1;
     transition: transform 1.4s cubic-bezier(0.19, 1, 0.22,1);
-    position: absolute;
-    top: 15%;
-    left: 50%;
     /* border-top: 2mm solid rgba(211, 220, 50, .6);
     border-bottom: 2mm solid rgba(211, 220, 50, .6);
     border-left: 4mm solid rgba(211, 220, 50, .6);
@@ -62,5 +59,5 @@
 
 .item-1-mobile{
     z-index: 1;
-    transform: scale(0.9)  translateX(100vw);
+    transform: translateX(100vw);
 }

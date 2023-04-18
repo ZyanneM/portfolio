@@ -130,28 +130,23 @@ const projects = [
                 </div>
             </div>
             <div className='slides-container-mobile'>
-                <div
-                    className='slide-items-mobile'
-                    id='slide-items-mobile'
-                    onClick={(event) => setItemSlider(event)}
-                >
                     {projectList.map((project, index) => (
+                        <div className="mobile-card-container">
                             <div
-                            
-                                key={project}
-                                id={index}
-                                className={`work-card-mobile ${projectList ? getItemClassMobile(index) : ""}`}>
-                                <SingleWorkMobile
-                                    src={project.src}
-                                    title={project.title}
-                                    technos={project.technos}
-                                    content={project.content}
-                                    repo={project.repo}
+                                
                                     key={project}
-                                />
+                                    id={index}
+                                    className={`work-card-mobile ${projectList ? getItemClassMobile(index) : ""}`}>
+                                    <SingleWorkMobile
+                                        src={project.src}
+                                        title={project.title}
+                                        technos={project.technos}
+                                        content={project.content}
+                                        repo={project.repo}
+                                        key={project}
+                                    /></div>
                         </div>
                     ))}
-                </div>
             </div>
             <div className="slider-navigation">
                 <button className="slider-nav prev" onClick={handlePrevClick}>&lsaquo;</button>
