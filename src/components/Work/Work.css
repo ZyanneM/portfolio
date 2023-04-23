@@ -133,9 +133,13 @@ max-width: 60%;
 }
 
 .slides-container-mobile{
-    width: 600vw;
+    width: 100vw;
     min-height: 100vh;
-    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* overflow-x: scroll; */
 }
 
 .mobile-card-container{
@@ -144,6 +148,16 @@ max-width: 60%;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
-    background: #fff;
+    margin: 3rem 0;
+    /* background: #fff; */
+}
+
+@media screen and (max-width: 767px) {
+    .slider-navigation{
+        display: none;
+    }
+}
+
+.slider-dots{
+    display: none;
 }

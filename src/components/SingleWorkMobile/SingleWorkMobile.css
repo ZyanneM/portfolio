@@ -56,8 +56,3 @@
 .project-img-mobile img{
     max-width: 60%;
     }
-
-.item-1-mobile{
-    z-index: 1;
-    transform: translateX(100vw);
-}

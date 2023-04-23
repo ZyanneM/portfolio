@@ -10,7 +10,7 @@ const Work = () => {
 const projects = [
     { id: 1, title: "Website Integration", technos: "Wordpress CMS", src: "./wordpress.mp4" , content: ['Astra Theme & Spectra Plugin', 'Customize Navigation', 'Add Animations'], repo: ""},
     { id: 2, title: "Mobile App MyPeacefulPlace", technos: "React / Node.Js + Next.JS", src: "./mypeacefulplace.mp4" , content: ['Positive Quotes Gallery & Editor', 'Customizable Cards', 'Signin & Login Session'], repo: "https://github.com/ZyanneM/mypeacefulplace" },
-    { id: 3, title: "Development Blog", technos: "PHP + MVC Template", src:  "./blog.mp4", content: ['CRUD Training', 'Ajax Reviews', 'Login/Signin'], repo: "https://github.com/ZyanneM/blog"},
+    { id: 3, title: "Development Blog", technos: "PHP + MVC Pattern", src:  "./blog.mp4", content: ['CRUD Training', 'Ajax Reviews', 'Login/Signin'], repo: "https://github.com/ZyanneM/blog"},
     { id: 4, title: "Cupcake Small Game", technos: "Javascript Vanilla", src:  "./jsvanilla.mp4", content: ['Dynamic Display', 'Keyboard Event', 'Style Manipulations'], repo: "https://github.com/ZyanneM/revisions_js" },
     { id: 5, title: "TVApp API Training", technos: "React", src: "./mytvapp.mp4" , content: ['API Call', 'Asynchrone Functions', 'React Router Configuration'], repo: "https://github.com/ZyanneM/mytvapp" },
     { id: 6, title: "React Burger App", technos: "React", src: "./appburger.mp4" , content: ['React Props Training', 'Cart Simulation', 'Tabs Navigation'], repo: "https://github.com/ZyanneM/react-burger-app"}
